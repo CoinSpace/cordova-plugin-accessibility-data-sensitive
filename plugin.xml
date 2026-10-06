@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="cordova-plugin-accessibility-data-sensitive"
+        version="1.0.0">
+
+    <name>Accessibility Data Sensitive</name>
+    <description>Marks the native Android Cordova WebView as accessibility data sensitive (View.setAccessibilityDataSensitive, Android 14+).</description>
+    <license>MIT</license>
+    <keywords>cordova,android,accessibility,privacy,security,webview</keywords>
+
+    <engines>
+        <!-- cordova-android 13 is the first release that compiles against SDK 34,
+             which is required for View.setAccessibilityDataSensitive(). -->
+        <engine name="cordova-android" version=">=13.0.0" />
+    </engines>
+
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="AccessibilityDataSensitive">
+                <param name="android-package" value="com.coinspace.plugin.accessibilitydatasensitive.AccessibilityDataSensitive" />
+                <!-- Instantiate during WebView initialization, without any JavaScript call. -->
+                <param name="onload" value="true" />
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/AccessibilityDataSensitive.java"
+                     target-dir="src/space/coin/cordova/accessibilitydatasensitive" />
+    </platform>
+</plugin>

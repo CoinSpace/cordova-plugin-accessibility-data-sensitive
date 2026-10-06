@@ -1,0 +1,35 @@
+{
+  "name": "cordova-plugin-accessibility-data-sensitive",
+  "version": "1.0.0",
+  "description": "Marks the native Android Cordova WebView as accessibility data sensitive (View.setAccessibilityDataSensitive, Android 14+).",
+  "cordova": {
+    "id": "cordova-plugin-accessibility-data-sensitive",
+    "platforms": [
+      "android"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova",
+    "android",
+    "accessibility",
+    "privacy",
+    "security",
+    "webview"
+  ],
+  "engines": {
+    "cordovaDependencies": {
+      "1.0.0": {
+        "cordova-android": ">=13.0.0"
+      }
+    }
+  },
+  "files": [
+    "plugin.xml",
+    "src/",
+    "README.md",
+    "LICENSE"
+  ],
+  "license": "MIT"
+}

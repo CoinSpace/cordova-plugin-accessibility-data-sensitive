@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'">
+    <title>A11y Sensitive Test</title>
+    <style>
+        body { font-family: sans-serif; padding: 16px; }
+        label, input, p { display: block; width: 100%; margin-bottom: 12px; font-size: 18px; }
+        input { padding: 8px; box-sizing: border-box; }
+    </style>
+</head>
+<body>
+    <h1>Sensitive data test</h1>
+    <p>SECRET-MARKER-1234 visible text</p>
+    <label for="seed">Recovery phrase</label>
+    <input id="seed" type="text" autocomplete="off" placeholder="Type a fake recovery phrase">
+    <label for="pin">PIN</label>
+    <input id="pin" type="password" inputmode="numeric" placeholder="Type a fake PIN">
+</body>
+</html>
